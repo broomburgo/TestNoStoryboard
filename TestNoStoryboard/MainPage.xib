@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainPage" customModule="TestNoStoryboard" customModuleProvider="target">
+            <connections>
+                <outlet property="helloLabel" destination="70N-33-oUE" id="yFj-Ip-Qj4"/>
+                <outlet property="view" destination="DW1-U7-ymV" id="EQV-lD-AeU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="DW1-U7-ymV">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CIAO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="70N-33-oUE">
+                    <rect key="frame" x="140.5" y="273.5" width="39" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ObG-Lz-dqZ">
+                    <rect key="frame" x="141" y="518" width="39" height="30"/>
+                    <state key="normal" title="NEXT"/>
+                    <connections>
+                        <action selector="didTapNext:" destination="-1" eventType="touchUpInside" id="uNN-e9-udc"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="70N-33-oUE" firstAttribute="centerX" secondItem="DW1-U7-ymV" secondAttribute="centerX" id="IOZ-qP-1GU"/>
+                <constraint firstItem="70N-33-oUE" firstAttribute="centerY" secondItem="DW1-U7-ymV" secondAttribute="centerY" id="aHN-yz-E4I"/>
+                <constraint firstAttribute="bottom" secondItem="ObG-Lz-dqZ" secondAttribute="bottom" constant="20" id="fFp-6d-kI6"/>
+                <constraint firstItem="ObG-Lz-dqZ" firstAttribute="centerX" secondItem="DW1-U7-ymV" secondAttribute="centerX" id="wGJ-Xq-BuA"/>
+            </constraints>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="9lv-y2-FSB" appends="YES" id="s8T-04-ZnN"/>
+            </connections>
+            <point key="canvasLocation" x="-110" y="-20"/>
+        </view>
+        <tapGestureRecognizer id="9lv-y2-FSB">
+            <connections>
+                <action selector="didTap:" destination="-1" id="FdH-BF-SEu"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>
